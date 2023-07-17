@@ -74,7 +74,7 @@ func main() {
 
 	cfg := &settings{
 		AuthKey:         defaultEnvs([]string{"TS_AUTHKEY", "TS_AUTH_KEY"}, ""),
-		Hostname:        defaultEnv("TS_HOSTNAME", ""),
+		Hostname:        defaultEnv("BALENA_DEVICE_NAME_AT_INIT", "balena-device"),
 		Routes:          defaultEnv("TS_ROUTES", ""),
 		ProxyTo:         defaultEnv("TS_DEST_IP", ""),
 		DaemonExtraArgs: defaultEnv("TS_TAILSCALED_EXTRA_ARGS", ""),
